@@ -1,11 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html>
 <html>
     <head>
-        <title>JAVAEE</title>
+        <title>结果展示页面</title>
     </head>
     <body>
-        <a href="/javaee-demo/basic/action/data.action">测试</a>
+        测试2
     </body>
 </html>
