@@ -9,14 +9,14 @@
     <url>http://maven.apache.org</url>
     <properties>
         <tomcatapi>7.0.64</tomcatapi>
-        <springapi>3.0.5.RELEASE</springapi>
+        <springapi>4.2.2.RELEASE</springapi>
         <log4japi>2.3</log4japi>
         <hibernateapi>5.0.2.Final</hibernateapi>
         <strutsapi>2.3.24</strutsapi>
     </properties>
 
     <dependencies>
-        <!--tomcat api-->
+        <!--tomcat-->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
@@ -50,12 +50,31 @@
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-spring-plugin</artifactId>
             <version>${strutsapi}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--spring-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+            <version>${springapi}</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-web</artifactId>
+            <groupId>org.springframework</groupId>
             <version>${springapi}</version>
         </dependency>
         <!--<dependency>-->
