@@ -22,4 +22,12 @@ public class DataAction extends ActionSupport {
     public String execute() throws Exception {
         return SUCCESS;
     }
+
+    public String saveData() {
+        if (dataService.saveData()) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
 }

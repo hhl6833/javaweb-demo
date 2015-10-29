@@ -8,16 +8,12 @@ import org.springframework.stereotype.Component;
 public class DataService {
     private DataModel dataModel;
 
-    public DataModel getDataModel() {
-        return dataModel;
-    }
-
     @Autowired
     public void setDataModel(DataModel dataModel) {
         this.dataModel = dataModel;
     }
 
-    public String getData() {
-        return dataModel.getData();
+    public boolean saveData() {
+        return dataModel.saveData();
     }
 }

@@ -11,8 +11,10 @@
         <tomcatapi>7.0.64</tomcatapi>
         <springapi>4.2.2.RELEASE</springapi>
         <log4japi>2.3</log4japi>
-        <hibernateapi>5.0.2.Final</hibernateapi>
+        <hibernateapi>4.2.21.Final</hibernateapi>
         <strutsapi>2.3.24</strutsapi>
+        <mysqlapi>5.1.37</mysqlapi>
+        <dbcpapi>2.1</dbcpapi>
     </properties>
 
     <dependencies>
@@ -73,52 +75,38 @@
             <version>${springapi}</version>
         </dependency>
         <dependency>
-            <artifactId>spring-web</artifactId>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
             <version>${springapi}</version>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.springframework</groupId>-->
-        <!--<artifactId>spring-orm</artifactId>-->
-        <!--<version>${springapi}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${springapi}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${springapi}</version>
+        </dependency>
 
         <!--hibernate-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-core</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-osgi</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-envers</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-c3p0</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-proxool</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-infinispan</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-ehcache</artifactId>-->
-        <!--<version>${hibernateapi}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernateapi}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysqlapi}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${dbcpapi}</version>
+        </dependency>
+
 
         <!--log-->
         <dependency>

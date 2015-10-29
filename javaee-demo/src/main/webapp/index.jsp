@@ -6,6 +6,6 @@
         <title>JAVAEE</title>
     </head>
     <body>
-        <a href="/javaee-demo/basic/action/data.action">测试</a>
+        <a href="/javaee-demo/basic/action/data!saveData.action">测试</a>
     </body>
 </html>
